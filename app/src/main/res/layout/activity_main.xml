@@ -18,10 +18,12 @@
         android:textAlignment="center"/>
 
     <Button
+        android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Empezar"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:onClick="startGame"/>
 
 </LinearLayout>
