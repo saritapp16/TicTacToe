@@ -46,7 +46,8 @@
         android:layout_gravity="center"
         android:src="@drawable/stats"
         android:layout_marginBottom="20dp"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        android:onClick="viewScores"/>
 
 
 

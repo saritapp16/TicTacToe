@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador 1: 0"
+        android:textSize="30dp"
+        android:id="@+id/text_p1_won"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador 2: 0"
+        android:textSize="30dp"
+        android:id="@+id/text_p1_lost"
+        android:layout_below="@id/text_p1_won"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jugador 1: 0"
+        android:textSize="30dp"
+        android:id="@+id/text_p2_won"
+        android:layout_below="@id/text_p1_lost"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador 2: 0"
+        android:textSize="30dp"
+        android:id="@+id/text_p2_lost"
+        android:layout_below="@id/text_p2_won"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

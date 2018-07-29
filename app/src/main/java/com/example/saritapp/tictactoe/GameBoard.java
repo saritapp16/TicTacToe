@@ -1,5 +1,6 @@
 package com.example.saritapp.tictactoe;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -153,13 +154,26 @@ public class GameBoard extends AppCompatActivity implements View.OnClickListener
     private void player1Wins() {
         player1Points++;
         Toast.makeText(this, "¡Ganó el jugador 1!", Toast.LENGTH_LONG).show();
+        SharedPreferences settings = getApplicationContext().getSharedPreferences("Scores", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("p1won", settings.getInt("p1won", 0) + 1);
+        editor.putInt("p2lost", settings.getInt("p2lost", 0) + 1);
+        // Aplicar los cambios
+        editor.apply();
         updatePointsText();
         resetBoard();
+
     }
 
     private void player2Wins() {
         player2Points++;
         Toast.makeText(this, "¡Ganó el jugador 2!", Toast.LENGTH_LONG).show();
+        SharedPreferences settings = getApplicationContext().getSharedPreferences("Scores", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("p2won", settings.getInt("p2won", 0) + 1);
+        editor.putInt("p1lost", settings.getInt("p1lost", 0) + 1);
+        // Aplicar los cambios
+        editor.apply();
         updatePointsText();
         resetBoard();
     }
